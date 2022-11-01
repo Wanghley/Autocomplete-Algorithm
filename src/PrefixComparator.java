@@ -9,7 +9,7 @@ import java.util.Comparator;
  * @author owen astrachan
  * @date October 8, 2020
  */
-public class    PrefixComparator implements Comparator<Term> {
+public class PrefixComparator implements Comparator<Term> {
 
     private int myPrefixSize; // size of prefix
 
@@ -42,6 +42,19 @@ public class    PrefixComparator implements Comparator<Term> {
     public int compare(Term v, Term w) {
         // change this to use myPrefixSize as specified,
         // replacing line below with code
-        return v.getWord().compareTo(w.getWord());
+
+        String w1 = v.getWord();
+        String w2 = w.getWord();
+
+
+        if(w1.length()>myPrefixSize){
+            w1 = w1.substring(0, myPrefixSize);
+        }
+        if(w2.length()>myPrefixSize){
+            w2 = w2.substring(0, myPrefixSize);
+        }
+
+        return w1.compareTo(w2);
+        
     }
 }
