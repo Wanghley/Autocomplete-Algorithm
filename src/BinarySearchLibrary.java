@@ -51,7 +51,7 @@ public class BinarySearchLibrary {
 		int high = list.size() - 1;
 		int foundAt = -1; // return -1 if not found
 		while (low <= high) {
-			// TODO: Complete code here. Consider the following invariant:
+			// DONE: Complete code here. Consider the following invariant:
 			// foundAt should be least index that matches target outside of [low, high] (-1 if none)
 			// indices less than foundAt that match target should be in [low, high]
 			int mid = (low + high) / 2;
@@ -92,7 +92,7 @@ public class BinarySearchLibrary {
 		int high = list.size() - 1;
 		int foundAt = -1; // return -1 if not found
 		while (low <= high) {
-			// TODO: Complete code here. Consider the following invariant:
+			// DONE: Complete code here. Consider the following invariant:
 			// foundAt should be *greatest* index that matches target outside of [low, high], (-1 if none)
 			// indices greater than foundAt that match target should be in [low, high]
 			int mid = (low + high) / 2;
